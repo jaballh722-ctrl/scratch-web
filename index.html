@@ -169,33 +169,62 @@
     <div class="signup-container">
         <img class="dont-use" src="Screenshot 2026-01-04 113650.png" alt="Don't use your real name" />
         
-        <form class="signup-form" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="6e1f7e71-ccab-4ba9-8f1d-bbfef70dc7f0" />
+        <form
+  class="signup-form"
+  action="https://usebasin.com/f/b0e0e21598cb"
+  method="POST"
+  id="form"
+>
+  <h2>welcome back to scratch!</h2>
+  <p class="subtitle">
+    This is a demo form. No real account is created.
+  </p>
 
-            <h2>welcome back to scratch!</h2>
-            <p class="subtitle">
-                Create projects, share ideas, make friends. It's free!
-            </p>
+  <div class="username-group">
+    <div class="username-input">
+      <label for="name">write your username</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Username"
+        required
+      />
+    </div>
+  </div>
 
-            <div class="username-group">
-                <div class="username-input">
-                    <label>write your username</label>
-                    <input type="text" name="username" placeholder="Username" required />
-                </div>
-            </div>
+  <div class="form-group">
+    <label for="email">write your email</label>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      placeholder="Email"
+      required
+    />
+  </div>
 
-            <div class="form-group">
-                <label>write your password</label>
-                <input type="password" name="password" id="pwd1" placeholder="Password" required />
-            </div>
+  <div class="form-group">
+    <label for="message">message (optional)</label>
+    <textarea
+      name="message"
+      id="message"
+      placeholder="Write something..."
+      style="
+        width: 100%;
+        padding: 14px 16px;
+        border: 1px solid #d0d0d0;
+        border-radius: 6px;
+        font-size: 15px;
+        resize: none;
+        height: 100px;
+      "
+    ></textarea>
+  </div>
 
-            <div class="checkbox-group">
-                <input type="checkbox" id="show" />
-                <label for="show">Show password</label>
-            </div>
+  <button type="submit" class="signup-button">Next</button>
+</form>
 
-            <button type="submit" class="signup-button">Next</button>
-        </form>
     </div>
 
     <script>
@@ -206,4 +235,5 @@
         });
     </script>
 </body>
+
 </html>
